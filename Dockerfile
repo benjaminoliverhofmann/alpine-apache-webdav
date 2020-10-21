@@ -8,7 +8,8 @@ RUN mkdir -p /www/wedbdav  && \
 chown -R apache:apache /www && \
 chmod 750 /www
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+ADD dav.conf /etc/apache2/conf.d/
+ADD docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

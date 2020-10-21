@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 if [[ -z "${USER}" || -z "${PASS}" ]]; then

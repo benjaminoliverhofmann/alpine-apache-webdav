@@ -10,7 +10,7 @@ else
     chmod -R 750 /www
 fi
 
-if [[ -z "${USER}" || -z "${PASS}" ]]; then
+if [[ -z "${USERNAME}" || -z "${PASS}" ]]; then
     echo "Please supply username and password"
     exit 1
 else

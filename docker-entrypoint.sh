@@ -5,9 +5,9 @@ then
     echo "webdav directory exists"
 else
     echo "creating webdav directory"
-    mkdir -p /www/webdav  && \
+    mkdir -p /www/{webdav,lockdb}  && \
     chown -R apache:apache /www && \
-    chmod 750 /www
+    chmod -R 750 /www
 fi
 
 if [[ -z "${USER}" || -z "${PASS}" ]]; then

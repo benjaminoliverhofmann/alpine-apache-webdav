@@ -5,7 +5,7 @@ then
     echo "webdav directory exists"
 else
     echo "creating webdav directory"
-    mkdir -p /www/wedbdav  && \
+    mkdir -p /www/webdav  && \
     chown -R apache:apache /www && \
     chmod 750 /www
 fi

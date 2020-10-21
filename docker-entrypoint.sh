@@ -1,5 +1,15 @@
 #!/bin/sh
 
+if [ -d "/www/webdav" ] 
+then
+    echo "webdav directory exists"
+else
+    echo "creating webdav directory"
+    mkdir -p /www/wedbdav  && \
+    chown -R apache:apache /www && \
+    chmod 750 /www
+fi
+
 if [[ -z "${USER}" || -z "${PASS}" ]]; then
     echo "Please supply username and password"
     exit 1
